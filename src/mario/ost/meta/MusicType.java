@@ -2,6 +2,9 @@ package mario.ost.meta;
 
 public class MusicType
 {
+	public MusicType()
+	{}
+
 	public static final String overWorld = "overWorld";
 
 	public static final String underGround = "underGround";
@@ -14,3 +17,4 @@ public class MusicType
 
 	public static final String mainTheme = "mainTheme";
 }
+
