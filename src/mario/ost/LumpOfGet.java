@@ -37,15 +37,24 @@ public class LumpOfGet
 	public static final float getStatus()
 	{
 		float res = 0;
+		int count = 0;
 		try
 		{
 			Class c = Class.forName("mario.ost.meta.Status");
-			Field[] f = c.getFields();
-			for(int i = 0;i < f.length;i++)
+			for(int i = 0; i < c.getClasses().length; i++)
 			{
-				res = res + f[i].getFloat("");
+				Class d = c.getClasses()[i];
+				for(int j = 0; j < d.getClasses().length; j++)
+				{
+					Field[] f = d.getClasses()[j].getFields();
+					for(int k = 0; k < f.length; k++)
+					{
+						res = res + f[k].getInt("");
+						count ++;
+					}
+				}
 			}
-			return res/f.length;
+			return res/count;
 		}
 		catch (Exception e)
 		{return res;}
