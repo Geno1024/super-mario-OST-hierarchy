@@ -49,7 +49,7 @@ public class LumpOfGet
 					Field[] f = d.getClasses()[j].getFields();
 					for(int k = 0; k < f.length; k++)
 					{
-						res = res + f[k].getInt("");
+						res = res + f[k].getFloat("");
 						count ++;
 					}
 				}
