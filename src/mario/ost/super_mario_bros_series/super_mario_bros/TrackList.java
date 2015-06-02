@@ -9,7 +9,7 @@ public class TrackList
 
 	public static final GregorianCalendar releaseDate = new GregorianCalendar(1985,9,13);
 
-	public static final String composer = "Kondo Koji";
+	public static final String[] composer = {"Kondo Koji"};
 
 	public static final String[] trackName = 
 	new String[]
