@@ -60,6 +60,19 @@ public class LumpOfGet
 		{return res;}
 	}
 
+	public static final int getTrackCount(String ostName) throws OSTNotFoundException
+	{
+		try
+		{
+			Class c = Class.forName(ostName+".TrackList");
+			return c.getField("trackCount").getInt("");
+		}
+		catch (ClassNotFoundException e)
+		{throw new OSTNotFoundException("\""+ostName+"\" is not a valid ost package or now unsupported.");}
+		catch (Exception e)
+		{return 0;}
+	}
+
 	public static final String getComposer(String ostName) throws OSTNotFoundException
 	{
 		String out = "";
