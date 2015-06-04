@@ -2,6 +2,8 @@ package mario.ost.exception;
 
 public class OSTNotFoundException extends Exception
 {
+	private static final long serialVersionUID = 5863422945100796337L;
+
 	public OSTNotFoundException()
 	{
 		super();
