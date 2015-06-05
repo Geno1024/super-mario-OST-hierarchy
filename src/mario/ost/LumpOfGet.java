@@ -10,7 +10,7 @@ public class LumpOfGet
 	{
 		try
 		{
-			Class c = Class.forName(ostName+".MetaData");
+			Class<?> c = Class.forName(ostName+".MetaData");
 			return c.getField(musictype).getInt("");
 		}
 		catch (ClassNotFoundException e)
@@ -40,10 +40,10 @@ public class LumpOfGet
 		int count = 0;
 		try
 		{
-			Class c = Class.forName("mario.ost.meta.Status");
+			Class<?> c = Class.forName("mario.ost.meta.Status");
 			for(int i = 0; i < c.getClasses().length; i++)
 			{
-				Class d = c.getClasses()[i];
+				Class<?> d = c.getClasses()[i];
 				for(int j = 0; j < d.getClasses().length; j++)
 				{
 					Field[] f = d.getClasses()[j].getFields();
@@ -64,7 +64,7 @@ public class LumpOfGet
 	{
 		try
 		{
-			Class c = Class.forName(ostName+".TrackList");
+			Class<?> c = Class.forName(ostName+".TrackList");
 			return c.getField("trackCount").getInt("");
 		}
 		catch (ClassNotFoundException e)
@@ -78,7 +78,7 @@ public class LumpOfGet
 		String out = "";
 		try
 		{
-			Class c = Class.forName(ostName+".TrackList");
+			Class<?> c = Class.forName(ostName+".TrackList");
 			String[] s = (String[]) c.getField("composer").get("");
 			for(int i = 0; i < s.length; i++)
 				out = out + s[i] + ",";
