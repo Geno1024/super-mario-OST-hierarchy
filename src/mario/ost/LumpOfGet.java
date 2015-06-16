@@ -87,7 +87,6 @@ public class LumpOfGet
 		catch (ClassNotFoundException e)
 		{throw new OSTNotFoundException("\""+ostName+"\" is not a valid ost package or now unsupported.");}
 		catch (Exception e)
-		{return "";}
+		{return "Unknown Error.\n";}
 	}
 }
-

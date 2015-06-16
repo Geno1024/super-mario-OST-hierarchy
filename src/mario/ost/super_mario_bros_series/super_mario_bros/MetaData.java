@@ -4,7 +4,7 @@ import mario.ost.meta.*;
 
 public class MetaData
 {
-	public static final Genre gameGenre = Genre.Platformer;
+	public static final Genre gameGenre = Genre.Action.Platformer;
 
 	public static final int overWorld = 1;
 

@@ -4,8 +4,12 @@ public class Genre
 {
 	public Genre(Genre g){}
 
-	public static Genre Platformer;
+	public static class Action
+	{
+		public static Genre Platform;
+
+		public static Genre Action;
+	}
 
 	public static Genre RPG;
 }
-

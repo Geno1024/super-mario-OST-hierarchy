@@ -6,7 +6,7 @@ public class TrackList
 {
 	public static final int trackCount = 18;
 
-	public static final GregorianCalendar releaseDate = new GregorianCalendar(1985,9,13);
+	public static final GregorianCalendar releaseDate = new GregorianCalendar(1985, 9, 13);
 
 	public static final String[] composer = {"Kondo Koji"};
 
