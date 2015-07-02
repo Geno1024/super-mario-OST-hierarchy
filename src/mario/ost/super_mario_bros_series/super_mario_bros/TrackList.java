@@ -14,8 +14,22 @@ public class TrackList
 	new String[]
 	{
 		"Super Mario Bros Main Theme",
-		"Invincible Star",
-		
+		"Invincibility Star",
+		"Hurry - Super Mario Bros Main Theme",
+		"Area Clear",
+		"Warp Pipe",
+		"Underground",
+		"Hurry - Underground",
+		"Water World",
+		"Hurry - Water World",
+		"King Koopa's Castle",
+		"Hurry - Castle",
+		"World Clear",
+		"Ending",
+		"1 - Up",
+		"1 - Down",
+		"Game Over",
+		"Ending - Super Mario Bros 2 (FDS)",
+		"Game Over (alternate)",
 	};
 }
-
