@@ -10,5 +10,24 @@ public class TrackList
 	
 	public static final String[] composer = {"Kondo Koji"};
 	
-	public static final String[] trackName;
+	public static final String[] trackName = 
+	new String[]
+	{
+		"Title Screen",
+		"Select Your Character",
+		"Super Mario Bros 2 Main Theme",
+		"Warp",
+		"Magic Doorway",
+		"Power Up",
+		"Invincible",
+		"Subcon Level B",
+		"Level Guard",
+		"World Clear",
+		"Bonus Game",
+		"1 - Up",
+		"1 - Down",
+		"Showdown With Wart",
+		"End of Dream - Cast",
+		"Game Over",
+	};
 }
