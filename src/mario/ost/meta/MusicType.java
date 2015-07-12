@@ -16,5 +16,7 @@ public class MusicType
 	public static final String ending = "ending";
 
 	public static final String mainTheme = "mainTheme";
+
+	public static final String athletic = "athletic";
 }
 

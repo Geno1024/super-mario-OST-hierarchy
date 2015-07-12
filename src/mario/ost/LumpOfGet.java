@@ -34,6 +34,16 @@ public class LumpOfGet
 		return getMusic(ostName, MusicType.waterWorld);
 	}
 
+	public static final int getCastle(String ostName) throws OSTNotFoundException
+	{
+		return getMusic(ostName, MusicType.castle);
+	}
+
+	public static final int getAthletic(String ostName) throws OSTNotFoundException
+	{
+		return getMusic(ostName, MusicType.athletic);
+	}
+
 	public static final float getStatus()
 	{
 		float res = 0;
