@@ -14,5 +14,5 @@ public class MetaData
 
 	public static final int waterWorld = 9;
 
-	
+	public static final int ending = 34;
 }
