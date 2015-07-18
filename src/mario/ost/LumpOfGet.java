@@ -6,6 +6,13 @@ import java.lang.reflect.*;
 
 public class LumpOfGet
 {
+	/**
+	 * 
+	 * @param ostName The OST name.
+	 * @param musictype The kind of music, use {@link MusicType}.
+	 * @return The number of this kind of music in this OST.
+	 * @throws OSTNotFoundException If this OST doesn't exists.
+	 */
 	public static final int getMusic(String ostName, String musictype) throws OSTNotFoundException
 	{
 		try
