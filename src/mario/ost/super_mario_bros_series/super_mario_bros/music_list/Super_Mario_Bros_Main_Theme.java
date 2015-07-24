@@ -2,7 +2,7 @@ package mario.ost.super_mario_bros_series.super_mario_bros.music_list;
 
 public class Super_Mario_Bros_Main_Theme
 {
-	public static final String music 
+	public static final String music
 	= "TIME:4/4" +
 		" T105" +
 		" V0 :CON(0,0) I26" +
