@@ -10,6 +10,8 @@ public class TrackList
 
 	public static final String[] composer = {"Kondo Koji"};
 
+	public static final boolean monoDisc = true;
+
 	public static final String[] trackName = 
 	new String[]
 	{

@@ -10,6 +10,8 @@ public class TrackList
 
 	public static final String[] composer = {"Yoko Shimomura"};
 
+	public static final boolean monoDisc = false;
+
 	public static final String[] trackName = 
 	{
 	};

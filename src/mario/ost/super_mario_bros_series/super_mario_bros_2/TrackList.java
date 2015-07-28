@@ -9,6 +9,8 @@ public class TrackList
 	public static final GregorianCalendar releaseDate = new GregorianCalendar(1988, 9, 9);
 	
 	public static final String[] composer = {"Kondo Koji"};
+
+	public static final boolean monoDisc = true;
 	
 	public static final String[] trackName = 
 	new String[]
