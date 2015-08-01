@@ -4,21 +4,21 @@ public class Status
 {
 	public static final class Super_Mario_Bros_Series
 	{
-		public static final float status = 1;
+		public static final double status = 1;
 
 		public static final class Super_Mario_Bros
 		{
-			public static final float status = 1;
+			public static final double status = 1;
 		}
 
 		public static final class Super_Mario_Bros_2
 		{
-			public static final float status = 1;
+			public static final double status = 1;
 		}
 
 		public static final class Super_Mario_Bros_3
 		{
-			public static final float status = 1;
+			public static final double status = 1;
 		}
 	}
 
