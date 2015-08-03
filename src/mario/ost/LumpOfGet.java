@@ -51,24 +51,26 @@ public class LumpOfGet
 		return getMusic(ostName, MusicType.athletic);
 	}
 
-	public static final float getStatus()
+	public static final double getStatus()
 	{
-		float res = 0;
+		double res = 0;
 		int count = 0;
 		try
 		{
-			Class<?> c = Class.forName("mario.ost.meta.Status");
-			for(int i = 0; i < c.getClasses().length; i++)
+			for(Class<?> c : ((Class<?>)Class.forName("mario.ost.meta.Status")).getClasses())
 			{
-				Class<?> d = c.getClasses()[i];
-				for(int j = 0; j < d.getClasses().length; j++)
+				for (Class<?> d : c.getClasses())
 				{
-					Field[] f = d.getClasses()[j].getFields();
-					for(int k = 0; k < f.length; k++)
+					for (Field f : d.getFields())
 					{
-						res += f[k].getFloat("");
+						res += f.getDouble("");
 						count++;
 					}
+				}
+				for (Field f : c.getFields())
+				{
+					res += f.getDouble("");
+					count++;
 				}
 			}
 			return res/count;
