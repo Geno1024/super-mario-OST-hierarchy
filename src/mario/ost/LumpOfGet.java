@@ -7,7 +7,6 @@ import java.lang.reflect.*;
 public class LumpOfGet
 {
 	/**
-	 * 
 	 * @param ostName The OST name.
 	 * @param musictype The kind of music, use {@link MusicType}.
 	 * @return The number of this kind of music in this OST.
