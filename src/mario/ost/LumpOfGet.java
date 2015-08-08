@@ -3,6 +3,7 @@ package mario.ost;
 import mario.ost.exception.*;
 import mario.ost.meta.*;
 import java.lang.reflect.*;
+import java.nio.file.NoSuchFileException;
 
 public class LumpOfGet
 {
@@ -16,13 +17,46 @@ public class LumpOfGet
 	{
 		try
 		{
-			Class<?> c = Class.forName(ostName+".MetaData");
+			Class<?> c = Class.forName(ostName + ".MetaData");
 			return c.getField(musictype).getInt("");
 		}
 		catch (ClassNotFoundException e)
-		{throw new OSTNotFoundException("\""+ostName+"\" is not a valid ost package or now unsupported.");}
+		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost package or now unsupported.");}
 		catch (Exception e)
 		{return 0;}
+	}
+
+	public static final boolean isMusicInDiskII(String ostName, String musictype) throws OSTNotFoundException, OnlyOneDiskOSTException
+	{
+		try
+		{
+			Class<?> c = Class.forName(ostName + ".MetaData");
+			return c.getField(musictype + "IsInDiskII").getBoolean("");
+		}
+		catch (ClassNotFoundException e)
+		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost package or now unsupported.");}
+		catch (NoSuchFieldException e)
+		{
+			try
+			{
+				if(!Class.forName(ostName + ".TrackList").getField("monoDisc").getBoolean(""))
+					return false;
+				else
+					return true;
+			}
+			catch (NoSuchFieldException f)
+			{
+				throw new OnlyOneDiskOSTException("\"" + ostName + "\" just have one disk.");
+			}
+			catch (Exception f)
+			{
+				return false;
+			}
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
 	}
 
 	public static final int getOverworld(String ostName) throws OSTNotFoundException
@@ -82,11 +116,11 @@ public class LumpOfGet
 	{
 		try
 		{
-			Class<?> c = Class.forName(ostName+".TrackList");
+			Class<?> c = Class.forName(ostName + ".TrackList");
 			return c.getField("trackCount").getInt("");
 		}
 		catch (ClassNotFoundException e)
-		{throw new OSTNotFoundException("\""+ostName+"\" is not a valid ost package or now unsupported.");}
+		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost package or now unsupported.");}
 		catch (Exception e)
 		{return 0;}
 	}
@@ -96,14 +130,14 @@ public class LumpOfGet
 		String out = "";
 		try
 		{
-			Class<?> c = Class.forName(ostName+".TrackList");
+			Class<?> c = Class.forName(ostName + ".TrackList");
 			String[] s = (String[]) c.getField("composer").get("");
 			for(int i = 0; i < s.length; i++)
 				out = out + s[i] + ",";
 			return s.length == 1 ? s[0] : out;
 		}
 		catch (ClassNotFoundException e)
-		{throw new OSTNotFoundException("\""+ostName+"\" is not a valid ost package or now unsupported.");}
+		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost package or now unsupported.");}
 		catch (Exception e)
 		{return "Unknown Error.\n";}
 	}
