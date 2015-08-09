@@ -39,10 +39,8 @@ public class LumpOfGet
 		{
 			try
 			{
-				if(!Class.forName(ostName + ".TrackList").getField("monoDisc").getBoolean(""))
-					return false;
-				else
-					return true;
+				Class.forName(ostName + ".TrackList").getField("monoDisc").getBoolean("");
+				return false;
 			}
 			catch (NoSuchFieldException f)
 			{
