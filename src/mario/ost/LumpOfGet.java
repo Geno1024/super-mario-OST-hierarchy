@@ -3,7 +3,6 @@ package mario.ost;
 import mario.ost.exception.*;
 import mario.ost.meta.*;
 import java.lang.reflect.*;
-import java.nio.file.NoSuchFileException;
 
 public class LumpOfGet
 {
