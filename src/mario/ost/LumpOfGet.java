@@ -7,12 +7,12 @@ import java.lang.reflect.*;
 public class LumpOfGet
 {
 	/**
-	 * @param ostName The OST name.
+	 * @param ostName The OST name, use {@link OSTList}.
 	 * @param musictype The kind of music, use {@link MusicType}.
 	 * @return The number of this kind of music in this OST.
 	 * @throws OSTNotFoundException If this OST doesn't exists.
 	 */
-	public static final int getMusic(String ostName, String musictype) throws OSTNotFoundException
+	public static final int getMusic(OST ostName, String musictype) throws OSTNotFoundException
 	{
 		try
 		{
@@ -20,12 +20,12 @@ public class LumpOfGet
 			return c.getField(musictype).getInt("");
 		}
 		catch (ClassNotFoundException e)
-		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost package or now unsupported.");}
+		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost OST or now unsupported.");}
 		catch (Exception e)
 		{return 0;}
 	}
 
-	public static final boolean isMusicInDiskII(String ostName, String musictype) throws OSTNotFoundException, OnlyOneDiskOSTException
+	public static final boolean isMusicInDiskII(OST ostName, String musictype) throws OSTNotFoundException, OnlyOneDiskOSTException
 	{
 		try
 		{
@@ -33,7 +33,7 @@ public class LumpOfGet
 			return c.getField(musictype + "IsInDiskII").getBoolean("");
 		}
 		catch (ClassNotFoundException e)
-		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost package or now unsupported.");}
+		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost OST or now unsupported.");}
 		catch (NoSuchFieldException e)
 		{
 			try
@@ -56,27 +56,27 @@ public class LumpOfGet
 		}
 	}
 
-	public static final int getOverworld(String ostName) throws OSTNotFoundException
+	public static final int getOverworld(OST ostName) throws OSTNotFoundException
 	{
 		return getMusic(ostName, MusicType.overWorld);
 	}
 
-	public static final int getUnderGround(String ostName) throws OSTNotFoundException
+	public static final int getUnderGround(OST ostName) throws OSTNotFoundException
 	{
 		return getMusic(ostName, MusicType.underGround);
 	}
 
-	public static final int getWaterWorld(String ostName) throws OSTNotFoundException
+	public static final int getWaterWorld(OST ostName) throws OSTNotFoundException
 	{
 		return getMusic(ostName, MusicType.waterWorld);
 	}
 
-	public static final int getCastle(String ostName) throws OSTNotFoundException
+	public static final int getCastle(OST ostName) throws OSTNotFoundException
 	{
 		return getMusic(ostName, MusicType.castle);
 	}
 
-	public static final int getAthletic(String ostName) throws OSTNotFoundException
+	public static final int getAthletic(OST ostName) throws OSTNotFoundException
 	{
 		return getMusic(ostName, MusicType.athletic);
 	}
@@ -109,7 +109,7 @@ public class LumpOfGet
 		{return res;}
 	}
 
-	public static final int getTrackCount(String ostName) throws OSTNotFoundException
+	public static final int getTrackCount(OST ostName) throws OSTNotFoundException
 	{
 		try
 		{
@@ -117,12 +117,12 @@ public class LumpOfGet
 			return c.getField("trackCount").getInt("");
 		}
 		catch (ClassNotFoundException e)
-		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost package or now unsupported.");}
+		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost OST or now unsupported.");}
 		catch (Exception e)
 		{return 0;}
 	}
 
-	public static final String getComposer(String ostName) throws OSTNotFoundException
+	public static final String getComposer(OST ostName) throws OSTNotFoundException
 	{
 		String out = "";
 		try
@@ -134,7 +134,7 @@ public class LumpOfGet
 			return s.length == 1 ? s[0] : out;
 		}
 		catch (ClassNotFoundException e)
-		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost package or now unsupported.");}
+		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost OST or now unsupported.");}
 		catch (Exception e)
 		{return "Unknown Error.\n";}
 	}
