@@ -2,7 +2,7 @@ package mario.ost.exception;
 
 public class OnlyOneDiskOSTException extends Exception
 {
-	private static final long serialVersionUID = 0;
+	private static final long serialVersionUID = -7055386884315147743L;
 
 	public OnlyOneDiskOSTException()
 	{
