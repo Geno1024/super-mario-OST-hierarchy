@@ -25,7 +25,7 @@ public class LumpOfGet
 		{return 0;}
 	}
 
-	public static final boolean isMusicInDiskII(OST ostName, String musictype) throws OSTNotFoundException, OnlyOneDiskOSTException
+	public static final boolean isMusicInDiskII(OST ostName, String musictype) throws OSTNotFoundException, OnlyOneDiskOSTException, UnHandledException
 	{
 		try
 		{
@@ -47,12 +47,12 @@ public class LumpOfGet
 			}
 			catch (Exception f)
 			{
-				return false;
+				throw new UnHandledException(f);
 			}
 		}
 		catch (Exception e)
 		{
-			return false;
+			throw new UnHandledException(e);
 		}
 	}
 
