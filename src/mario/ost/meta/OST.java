@@ -2,6 +2,12 @@ package mario.ost.meta;
 
 public class OST
 {
+	public static final OST Super_Mario_Bros = new OST("mario.ost.super_mario_bros_series.super_mario_bros");
+
+	public static final OST Super_Mario_Bros_2 = new OST("mario.ost.super_mario_bros_series.super_mario_bros_2");
+
+	public static final OST Super_Mario_Bros_3 = new OST("mario.ost.super_mario_bros_series.super_mario_bros_3");
+
 	public Package ost;
 
 	public String ostName;
