@@ -12,12 +12,12 @@ public class LumpOfGet
 	 * @return The number of this kind of music in this OST.
 	 * @throws OSTNotFoundException If this OST doesn't exists.
 	 */
-	public static final int getMusic(OST ostName, String musictype) throws OSTNotFoundException
+	public static final int getMusic(OST ostName, MusicType musictype) throws OSTNotFoundException
 	{
 		try
 		{
 			Class<?> c = Class.forName(ostName + ".MetaData");
-			return c.getField(musictype).getInt("");
+			return c.getField(musictype.toString()).getInt("");
 		}
 		catch (ClassNotFoundException e)
 		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost OST or now unsupported.");}
