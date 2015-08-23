@@ -18,13 +18,13 @@ public class MusicType
 
 	public static final MusicType map = new MusicType("map");
 
-	public String string;
+	public String musicTypeName;
 
 	public MusicType musicType;
 
-	public MusicType(String string)
+	public MusicType(String musicTypeName)
 	{
-		this.string = string;
+		this.musicTypeName = musicTypeName;
 	}
 
 	public MusicType(MusicType musicType)
@@ -35,7 +35,7 @@ public class MusicType
 	@Override
 	public String toString()
 	{
-		return this.string;
+		return this.musicTypeName;
 	}
 }
 
