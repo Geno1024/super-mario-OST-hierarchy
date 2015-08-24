@@ -11,8 +11,9 @@ public class LumpOfGet
 	 * @param musictype The kind of music, use {@link MusicType}.
 	 * @return The number of this kind of music in this OST.
 	 * @throws OSTNotFoundException If this OST doesn't exists.
+	 * @throws UnHandledException If an unknown exception occurs.
 	 */
-	public static final int getMusic(OST ostName, MusicType musictype) throws OSTNotFoundException
+	public static final int getMusic(OST ostName, MusicType musictype) throws OSTNotFoundException, UnHandledException
 	{
 		try
 		{
@@ -22,7 +23,7 @@ public class LumpOfGet
 		catch (ClassNotFoundException e)
 		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost OST or now unsupported.");}
 		catch (Exception e)
-		{return 0;}
+		{throw new UnHandledException(e);}
 	}
 
 	public static final boolean isMusicInDiskII(OST ostName, String musictype) throws OSTNotFoundException, OnlyOneDiskOSTException, UnHandledException
@@ -81,7 +82,7 @@ public class LumpOfGet
 		return getMusic(ostName, MusicType.athletic);
 	}
 
-	public static final double getStatus()
+	public static final double getStatus() throws UnHandledException
 	{
 		double res = 0;
 		int count = 0;
@@ -106,10 +107,10 @@ public class LumpOfGet
 			return res/count;
 		}
 		catch (Exception e)
-		{return res;}
+		{throw new UnHandledException("TotalRes", res, e.getMessage(), e);}
 	}
 
-	public static final int getTrackCount(OST ostName) throws OSTNotFoundException
+	public static final int getTrackCount(OST ostName) throws OSTNotFoundException, UnHandledException
 	{
 		try
 		{
@@ -119,10 +120,10 @@ public class LumpOfGet
 		catch (ClassNotFoundException e)
 		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost OST or now unsupported.");}
 		catch (Exception e)
-		{return 0;}
+		{throw new UnHandledException(e);}
 	}
 
-	public static final String getComposer(OST ostName) throws OSTNotFoundException
+	public static final String getComposer(OST ostName) throws OSTNotFoundException, UnHandledException
 	{
 		String out = "";
 		try
@@ -136,6 +137,6 @@ public class LumpOfGet
 		catch (ClassNotFoundException e)
 		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost OST or now unsupported.");}
 		catch (Exception e)
-		{return "Unknown Error.\n";}
+		{throw new UnHandledException(e);}
 	}
 }
