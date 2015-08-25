@@ -57,27 +57,27 @@ public class LumpOfGet
 		}
 	}
 
-	public static final int getOverworld(OST ostName) throws OSTNotFoundException
+	public static final int getOverworld(OST ostName) throws OSTNotFoundException, UnHandledException
 	{
 		return getMusic(ostName, MusicType.overWorld);
 	}
 
-	public static final int getUnderGround(OST ostName) throws OSTNotFoundException
+	public static final int getUnderGround(OST ostName) throws OSTNotFoundException, UnHandledException
 	{
 		return getMusic(ostName, MusicType.underGround);
 	}
 
-	public static final int getWaterWorld(OST ostName) throws OSTNotFoundException
+	public static final int getWaterWorld(OST ostName) throws OSTNotFoundException, UnHandledException
 	{
 		return getMusic(ostName, MusicType.waterWorld);
 	}
 
-	public static final int getCastle(OST ostName) throws OSTNotFoundException
+	public static final int getCastle(OST ostName) throws OSTNotFoundException, UnHandledException
 	{
 		return getMusic(ostName, MusicType.castle);
 	}
 
-	public static final int getAthletic(OST ostName) throws OSTNotFoundException
+	public static final int getAthletic(OST ostName) throws OSTNotFoundException, UnHandledException
 	{
 		return getMusic(ostName, MusicType.athletic);
 	}
