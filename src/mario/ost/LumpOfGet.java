@@ -115,7 +115,7 @@ public class LumpOfGet
 		{
 			String[] s = (String[]) Class.forName(ostName + ".TrackList").getField("composer").get("");
 			for(int i = 0; i < s.length; i++)
-				out = out + s[i] + ",";
+				out += s[i] + ",";
 			return s.length == 1 ? s[0] : out;
 		}
 		catch (ClassNotFoundException e)
