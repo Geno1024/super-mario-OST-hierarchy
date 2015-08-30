@@ -8,7 +8,7 @@ public class OST
 
 	public static final OST Super_Mario_Bros_3 = new OST("mario.ost.super_mario_bros_series.super_mario_bros_3");
 
-	public static final OST Super_Mario_Bros_RPG = new OST("mario.ost.super_mario_rpg_series.super_mario_rpg");
+	public static final OST Super_Mario_RPG = new OST("mario.ost.super_mario_rpg_series.super_mario_rpg");
 
 	public Package ost;
 
