@@ -42,7 +42,7 @@ public class SoundTrack
 	public void play()
 	{
 		Player p = new Player();
-		p.play(pattern);
+		p.play(musicString);
 	}
 
 	public boolean hasMusicString()
