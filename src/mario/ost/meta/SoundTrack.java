@@ -13,6 +13,8 @@ public class SoundTrack
 
 	public Pattern[] pattern;
 
+	public Class<?> trackClass;
+
 	public SoundTrack track;
 
 	public SoundTrack(String trackName)
@@ -32,6 +34,12 @@ public class SoundTrack
 	public SoundTrack(Pattern...pattern)
 	{
 		this.pattern = pattern;
+	}
+
+	public SoundTrack(Class<?> trackClass) throws Exception
+	{
+		this.trackName = trackClass.getSimpleName();
+		this.musicString = (String) trackClass.getField("music").get("");
 	}
 
 	public SoundTrack(SoundTrack track)
