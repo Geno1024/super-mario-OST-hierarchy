@@ -41,6 +41,7 @@ public class SoundTrack
 
 	public void play()
 	{
+		if(!hasMusicString) return;
 		Player p = new Player();
 		p.play(musicString);
 	}
@@ -48,6 +49,18 @@ public class SoundTrack
 	public boolean hasMusicString()
 	{
 		return hasMusicString;
+	}
+
+	public String getMusicString()
+	{
+		return hasMusicString ? musicString : null;
+	}
+
+	public SoundTrack setMusicString(String musicString)
+	{
+		this.hasMusicString = true;
+		this.musicString = musicString;
+		return this;
 	}
 
 	@Override
