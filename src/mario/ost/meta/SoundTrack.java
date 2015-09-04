@@ -36,10 +36,13 @@ public class SoundTrack
 		this.pattern = pattern;
 	}
 
-	public SoundTrack(Class<?> trackClass) throws Exception
+	public SoundTrack(Class<?> trackClass)
 	{
 		this.trackName = trackClass.getSimpleName();
-		this.musicString = (String) trackClass.getField("music").get("");
+		try
+		{this.musicString = (String) trackClass.getField("music").get("");}
+		catch (Exception e)
+		{return;}
 	}
 
 	public SoundTrack(SoundTrack track)
