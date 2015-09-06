@@ -8,6 +8,8 @@ public class SoundTrack
 	public static final class Super_Mario_Bros
 	{
 		public static final SoundTrack Super_Mario_Bros_Main_Theme = new SoundTrack(mario.ost.super_mario_bros_series.super_mario_bros.music_list.Super_Mario_Bros_Main_Theme.class);
+
+		public static final SoundTrack Invincibility_Star = new SoundTrack(mario.ost.super_mario_bros_series.super_mario_bros.music_list.Invincibility_Star.class);
 	}
 
 	public String trackName;
