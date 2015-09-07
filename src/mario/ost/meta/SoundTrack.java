@@ -49,7 +49,7 @@ public class SoundTrack
 		try
 		{this.musicString = (String) trackClass.getField("music").get("");}
 		catch (Exception e)
-		{return;}
+		{e.printStackTrace();}
 	}
 
 	public SoundTrack(SoundTrack track)
