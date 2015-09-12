@@ -10,6 +10,10 @@ public class OST
 
 	public static final OST Super_Mario_RPG = new OST("mario.ost.super_mario_rpg_series.super_mario_rpg");
 
+	public static final OST Paper_Mario = new OST("mario.ost.paper_mario_series.paper_mario");
+
+	public static final OST Paper_Mario_The_Thousand_Year_Door = new OST("mario.ost.paper_mario_series.the_thousand_year_door");
+
 	public Package ost;
 
 	public String ostName;

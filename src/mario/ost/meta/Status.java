@@ -22,8 +22,23 @@ public class Status
 		}
 	}
 
-	public class Super_Mario_RPG_Series
+	public static final class Super_Mario_RPG_Series
 	{
-		
+		public static final double status = 0;
+
+		public static final class Super_Mario_RPG
+		{
+			public static final double status = 0;
+		}
+	}
+
+	public static final class Paper_Mario_Series
+	{
+		public static final double status = 0;
+
+		public static final class Paper_Mario
+		{
+			public static final double status = 0;
+		}
 	}
 }
