@@ -11,4 +11,9 @@ public class TrackList
 	public static final String[] composer = {"Yuka Tsujiyoko"};
 
 	public static final boolean monoDisc = false;
+
+	public static final String[] trackName =
+	new String[]
+	{
+	};
 }
