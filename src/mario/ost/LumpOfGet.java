@@ -32,10 +32,7 @@ public class LumpOfGet
 		catch (NoSuchFieldException e)
 		{
 			try
-			{
-				Class.forName(ostName + ".TrackList").getField("monoDisc").getBoolean("");
-				return false;
-			}
+			{Class.forName(ostName + ".TrackList").getField("monoDisc").getBoolean("");return false;}
 			catch (NoSuchFieldException f)
 			{throw new OnlyOneDiskOSTException("\"" + ostName + "\" just have one disk.");}
 			catch (Exception f)
@@ -114,8 +111,7 @@ public class LumpOfGet
 		try
 		{
 			String[] s = (String[]) Class.forName(ostName + ".TrackList").getField("composer").get("");
-			for(int i = 0; i < s.length; i++)
-				out += s[i] + ",";
+			for (String i : s) {out += i + ",";}
 			return s.length == 1 ? s[0] : out;
 		}
 		catch (ClassNotFoundException e)
