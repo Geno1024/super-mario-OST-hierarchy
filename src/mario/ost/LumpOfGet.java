@@ -2,6 +2,8 @@ package mario.ost;
 
 import mario.ost.exception.*;
 import mario.ost.meta.*;
+import org.jfugue.player.Player;
+
 import java.lang.reflect.*;
 
 public class LumpOfGet
@@ -118,5 +120,11 @@ public class LumpOfGet
 		{throw new OSTNotFoundException("\"" + ostName + "\" is not a valid ost OST or now unsupported.");}
 		catch (Exception e)
 		{throw new UnHandledException(e);}
+	}
+
+	public static final void play(OST ost)
+	{
+		Player p = new Player();
+		p.play(ost.toString());
 	}
 }

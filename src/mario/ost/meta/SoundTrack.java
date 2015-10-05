@@ -47,9 +47,9 @@ public class SoundTrack
 	{
 		this.trackName = trackClass.getSimpleName();
 		try
-		{this.musicString = (String) trackClass.getField("music").get("");}
+		{this.hasMusicString = true; this.musicString = (String) trackClass.getField("music").get("");}
 		catch (Exception e)
-		{e.printStackTrace();}
+		{this.hasMusicString = false; this.musicString = "";}
 	}
 
 	public SoundTrack(SoundTrack track)
